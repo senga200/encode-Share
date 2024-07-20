@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+
+    <title>URL Encoder/Decoder</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<h1>URL%20ENCODE%20<span class="esperluette">&</span>%20SHARE%20TOOL</h1>
+<div class="encode">
+    <div class="shareTitle">
+        <h3>Encoder un texte ou une URL</h3>
+        <img src="img/pourcentage_64.png" alt="mailto">
+    </div>
+    <div class="inputEncode">
+        <input id="input" placeholder="Entrez le texte ou l'url..."></input>
+
+    </div>
+
+    <div class="button-container">
+        <button onclick="encodeURL()">Encode</button>
+        <button onclick="decodeURL()">Decode</button>
+    </div>
+    <div class="output">
+        <p>RESULTAT :</p>
+        <textarea id="output" readonly></textarea>
+    </div>
+</div>
+
+<div class="share">
+    <div class="shareTitle">
+        <h3>Mailto</h3>
+        <img src="img/send-mail_64.png" alt="mailto">
+    </div>
+    <div class="subject">
+        <p>SUBJECT :</p>
+        <input type="text" id="mailtoSubjectInput" placeholder="Entrez le subject...">
+    </div>
+    <div class="body">
+        <p>BODY :</p>
+        <input type="text" id="mailtoBodyInput" placeholder="Entrez le body...">
+    </div>
+    <div class="link">
+        <p>Lien à partager :</p>
+        <input type="url" id="mailtoLinkInput" placeholder="Entrez le lien...">
+    </div>
+    <div class="link">
+        <p>Lien Android à partager :</p>
+        <input type="url" id="mailtoLinkInput1" placeholder="Entrez le lien...">
+    </div>
+    <div class="link">
+        <p>Lien IOS à partager :</p>
+        <input type="url" id="mailtoLinkInput2" placeholder="Entrez le lien...">
+    </div>
+    <div class="button-container">
+        <button onclick="encodeAndConcatenateMailTo()">Encoder et Concaténer</button>
+    </div>
+    <div id="mailtoResult">
+        <p>RESULTAT :</p>
+        <input type="text" id="mailtoResultInput" readonly>
+    </div>
+</div>
+
+<div class="share">
+    <div class="shareTitle">
+        <h3>WhatsApp</h3>
+        <img src="img/whatsapp_64.png" alt="mailto">
+    </div>
+    <div class="text">
+        <p>TEXT :</p>
+        <input type="text" id="whatsappTextInput" placeholder="entrez le texte...">
+    </div>
+    <div class="link">
+        <p>Lien à partager :</p>
+        <input type="url" id="whatsappLinkInput" placeholder="entrez le lien...">
+    </div>
+    <div class="button-container">
+        <button onclick="encodeAndConcatenateWhatsApp()">Encoder et concaténer</button>
+    </div>
+    <div id="whatsappResult">
+        <p>RESULTAT :</p>
+        <input type="text" id="whatsappResultInput" readonly>
+    </div>
+</div>
+<div class="share">
+      <div class="shareTitle">
+        <h3>Messenger</h3><p class="endTitle">(pour mobile)</p>
+        <img src="img/messenger_64.png" alt="mailto">
+    </div>
+    <div class="link">
+        <p>Lien à partager :</p>
+        <input type="url" id="messengerLinkInput" placeholder="Entrez le lien...">
+    </div>
+    <div class="button-container">
+        <button onclick="encodeMessenger()">Encode</button>
+    </div>
+    <div id="messengerResult">
+        <p>RESULTAT :</p>
+        <input type="text" id="messengerResultInput" readonly>
+    </div>
+</div>
+<div class="share">
+    <div class="shareTitle">
+        <h3>FaceBook</h3>
+        <img src="img/facebook_64.png" alt="mailto">
+    </div>
+    <div class="link">
+        <p>Lien à partager :</p>
+        <input type="url" id="facebookLinkInput" placeholder="Entrez le lien...">
+    </div>
+    <div class="button-container">
+        <button onclick="encodeFacebook()">Encode</button>
+    </div>
+    <div id="facebookResult">
+        <p>RESULTAT :</p>
+        <input type="text" id="facebookResultInput" readonly>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
